@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://varshaj666:test123@cluster0.fjayy22.mongodb.net/todolistDB", () => {
+mongoose.connect("mongodb+srv://varshaj666:test123@cluster0.fjayy22.mongodb.net/?retryWrites=true&w=majority/todolistDB", () => {
   console.log('connected to database todolistDb server')
 });
 
