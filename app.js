@@ -136,6 +136,8 @@ app.post("/delete", function(req, res) {
       if (!err) {
         console.log("successfully deleted checkeditem");
         res.redirect("/");
+      }else{
+        console.log(err);
       }
     })
   }
@@ -146,9 +148,11 @@ app.post("/delete", function(req, res) {
       if(!err){
         res.redirect("/" + listName);
       }
+      else{
+        console.log(err);
+      }
     })
   }
-
 });
 
 app.get("/about", function(req, res) {
