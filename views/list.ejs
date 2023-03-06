@@ -8,7 +8,7 @@
     <% newListItems.forEach((item) => {  %>
       <form action="/delete" method="post">
         <div class="item">
-          <input type="checkbox" name="checkbox" value ="<%=item._id%>" onChange = "this.form.submit()"  onClick="window.location.reload()">
+          <input type="checkbox" name="checkbox" value ="<%=item._id%>" onChange = "this.form.submit()"  onClick="location.href='https://todolist-p13z.onrender.com/';">
           <p><%=  item.name  %></p>
         </div>
         <input type="hidden" name="listName" value="<%= listTitle%>"> </input>
@@ -19,7 +19,7 @@
 
       <form class="item" action="/" method="post">
         <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-        <button type="submit" name="list" value="<%= listTitle %>" onClick="window.location.reload(true)">+</button>
+        <button type="submit" name="list" value="<%= listTitle %>" onClick="location.href='https://todolist-p13z.onrender.com/';">+</button>
       </form>
   </div>
 
